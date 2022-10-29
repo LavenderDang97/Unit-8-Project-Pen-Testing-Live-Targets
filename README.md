@@ -30,7 +30,7 @@ Vulnerability #1: User Enumeration
 
 Description: This vulnerability is on the Login page for the green website. The mistake the developer made was assigning a different class to failed login attempt message for valid usernames and invalid usernames. As shown in the walkthrough, attempting to login with the invalid username 'zyx' results in a 'Log in was unsuccessful' message that is bolded, under the class 'failed'. On the other hand, attempting to login with the valid username 'jmonroe99' with the incorrect password results in the same message unbolded, under the class 'failure'. An attacker can use this vulnerability to enumerate through usernames to figure out which are valid. 
 
-![](User Enumeration.gif)
+![](UserEnumeration.gif)
 
 
 ## Red
