@@ -35,11 +35,11 @@ Description: This vulnerability is on the Login page for the green website. The 
 
 ## Red
 
-Vulnerability #1: __________________
+Vulnerability #1: Indirect Object Reference 
 
-Description:
+Description: Under staff information, each staff member's profile is identified by their ID, which is visible in the URL. In the red page, the user can simply change the ID to that of any person who is in the salesperson, even those who are not supposed to be visible (such as Lazy Lazyman who was fired). While the other versions of the site redirect the user to the salesperson directory when changing the ID to that of a salesperson who is not listed on the public site, the red version still shows the non-public salesperson's profile. In the walkthrough, this is demonstrated by changing the ID to that of Lazy Lazyman (11).
 
-<img src="red-vuln1.gif">
+![](IDOR.gif)
 
 
 ## Notes
