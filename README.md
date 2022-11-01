@@ -17,11 +17,11 @@ Each color is vulnerable to only 2 of the 6 possible exploits. First discover wh
 
 ## Blue
 
-Vulnerability #1: __________________
+Vulnerability #1: SQL Injection 
 
-Description:
+Description: Under the salesperson information page, the user can perform an attack by adding a SQL injection to the end of the URL. As shown in the walkthrough, when adding ' OR SLEEP(5)=0--' to the end of the URL, the website shows a different staff member's profile, indicating that it responded to the SQL that was added. The mistake the developer made was not sanitizing the URL input.
 
-<img src="blue-vuln1.gif">
+![](SQLInjection.gif)
 
 
 ## Green
@@ -40,8 +40,3 @@ Vulnerability #1: Indirect Object Reference
 Description: Under staff information, each staff member's profile is identified by their ID, which is visible in the URL. In the red page, the user can simply change the ID to that of any person who is in the salesperson, even those who are not supposed to be visible (such as Lazy Lazyman who was fired). While the other versions of the site redirect the user to the salesperson directory when changing the ID to that of a salesperson who is not listed on the public site, the red version still shows the non-public salesperson's profile. In the walkthrough, this is demonstrated by changing the ID to that of Lazy Lazyman (11).
 
 ![](IDOR.gif)
-
-
-## Notes
-
-Describe any challenges encountered while doing the work
